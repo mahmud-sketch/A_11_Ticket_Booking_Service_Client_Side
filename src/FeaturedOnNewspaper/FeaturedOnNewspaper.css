@@ -1,0 +1,16 @@
+.paper{
+    text-align: center;
+    border: 2px solid rgb(3, 3, 46);
+    background-color: rgb(234, 237, 243);
+    border-radius: 3px;
+    height: 50px;
+    width: 300px;
+    margin-bottom:10px ;
+
+}
+
+.header1{
+    font-weight: 1000;
+    font-size:xx-large;
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Bus Ride Service",
+        "cost": "5,000",
+        "info": "Our Ride offers many ways for you to get around – whether you want to travel locally in the Prince William County area or get to destinations in Northern part of the globe. Many of these bus services is right for you.",
+        "img": "https://i.ibb.co/5j2YDj8/bus.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Book an Air Ticket",
+        "cost": "1,000",
+        "info": "An airline is a company that provides air transport services for traveling passengers and freight. Airlines use aircraft to supply these services and may form partnerships or alliances with other airlines for codeshare agreements, in which they both offer and operate the same flight.",
+        "img": "https://i.ibb.co/d7z2Xxs/plane.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Car Ride Service",
+        "cost": "50,000",
+        "info": "A transportation network company, ride-hailing service; the vehicles are called app-taxis or e-taxis is a company that, via websites and mobile apps, matches passengers with drivers of vehicles for hire that, unlike taxicabs, cannot legally be hailed from the street.",
+        "img": "https://i.ibb.co/f4hYGxG/car.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Yacht for Personal",
+        "cost": "3,000",
+        "info": "A yacht is a sailing or power vessel used for pleasure, cruising, or racing.There is no standard definition, so the term applies to such vessels that have a cabin with amenities that accommodate overnight use and also  pleasure vessel.",
+        "img": "https://i.ibb.co/WfdpqKV/yacht.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Cruse for Sea",
+        "cost": "6,000",
+        "info": "Carnival cruise deals and cruise packages to the most popular destinations. Find great deals and specials on Caribbean, The Bahamas, Alaska, and Mexico .This will be a lifetime memorale experience to have a journey with us",
+        "img": "https://i.ibb.co/1bPFcfd/cruise.jpg"
+    },
+    {
+        "id": "6",
+        "name": "MotorBike Ride Service",
+        "cost": "500",
+        "info": "Student health plans are often purchased when family coverage is not available. According to some estimates, as many as 3 million students are covered through student health plans offered by colleges, universities, or other institutions of higher education.",
+        "img": "https://i.ibb.co/jh7m4vH/bike.jpg"
+    }
+]
