@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 function ManageAllRides() {
     const [orders, setOrders] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:5000/orders')
             .then(res => res.json())
@@ -9,7 +10,22 @@ function ManageAllRides() {
     }, [])
 
     const deleteOrder = (id) => {
-        console.log(id);
+        const url = `http://localhost:5000/rides/${id}`
+        fetch(url, {
+            method: 'delete'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('deleted successfully!');
+                    fetch(`http://localhost:5000/orders`)
+                        .then(res => res.json())
+                        .then(data => { setOrders(data) });
+                    // const remaingOrders = 
+                } else {
+                    alert('delete operation not successfull. Delete once again!')
+                }
+            });
     }
 
     return (

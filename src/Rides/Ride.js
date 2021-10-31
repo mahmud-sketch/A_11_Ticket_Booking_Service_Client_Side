@@ -9,7 +9,7 @@ function Ride(props) {
             <h3>Name:{name}</h3>
             <h4>Cost:{cost}</h4>
             <p>Info:{info}</p>
-            <img src={img} alt="insurance" />
+            <img src={img} alt="ridePicture" style={{ "display": "block", "height": "210px", "width": "320px" }} />
             <Link to={`/details/${_id}`}><button className="bg-indigo-900 text-white active:bg-purple-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 middle"
             >Book a Ride</button></Link>
 
