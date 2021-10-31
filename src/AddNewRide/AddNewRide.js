@@ -15,7 +15,7 @@ function AddNewRide() {
 
         const ride = { name, cost, info, img };
 
-        fetch('http://localhost:5000/allrides', {
+        fetch('https://grisly-beast-74781.herokuapp.com/allrides', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'

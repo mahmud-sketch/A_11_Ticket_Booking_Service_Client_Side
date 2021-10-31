@@ -7,7 +7,7 @@ function MyRides() {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://grisly-beast-74781.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => { setOrders(data) });
     }, [])
@@ -15,7 +15,7 @@ function MyRides() {
     const deleteOrder = (id) => {
         const proceed = window.confirm('do you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/rides/${id}`
+            const url = `https://grisly-beast-74781.herokuapp.com/rides/${id}`
             fetch(url, {
                 method: 'delete'
             })
@@ -23,7 +23,7 @@ function MyRides() {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('deleted successfully!');
-                        fetch(`http://localhost:5000/orders?email=${user.email}`)
+                        fetch(`https://grisly-beast-74781.herokuapp.com/orders?email=${user.email}`)
                             .then(res => res.json())
                             .then(data => { setOrders(data) });
                         // const remaingOrders = 

@@ -6,7 +6,7 @@ function UpdateOrder() {
     const { id } = useParams();
     const [order, setOrder] = useState([])
 
-    const url = `http://localhost:5000/update/${id}`
+    const url = `https://grisly-beast-74781.herokuapp.com/update/${id}`
 
     useEffect(() => {
         fetch(url)

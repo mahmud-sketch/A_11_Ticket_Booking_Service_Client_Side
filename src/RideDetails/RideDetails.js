@@ -11,7 +11,7 @@ function RideDetails() {
     const addressRef = useRef();
     const paymentMethodRef = useRef();
 
-    const url = `http://localhost:5000/allrides/${id.id}`;
+    const url = `https://grisly-beast-74781.herokuapp.com/allrides/${id.id}`;
 
     useEffect(() => {
         fetch(url)
@@ -33,7 +33,7 @@ function RideDetails() {
 
         const order = { rideName, cost, info, img, name, email, address, paymentMethod, status };
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://grisly-beast-74781.herokuapp.com/orders', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
