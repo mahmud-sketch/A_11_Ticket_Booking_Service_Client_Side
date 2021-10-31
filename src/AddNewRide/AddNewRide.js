@@ -40,7 +40,7 @@ function AddNewRide() {
                 <input type="text" placeholder="ride cost" name="" id="" ref={costRef} /><br />
                 <input type="text" placeholder="ride info(80 words)" name="" id="" ref={infoRef} /><br />
                 <input type="text" placeholder="**image URL Only" name="" id="" ref={imgRef} /><br />
-                <input type="submit" value="add order" />
+                <input type="submit" value="add ride" className="bg-indigo-900 text-white  font-bold  px-3 py-1 rounded  mr-1 mb-1" />
             </form>
         </div>
     )

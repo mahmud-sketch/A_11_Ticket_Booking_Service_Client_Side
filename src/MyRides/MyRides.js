@@ -13,34 +13,38 @@ function MyRides() {
     }, [])
 
     const deleteOrder = (id) => {
-        const url = `http://localhost:5000/rides/${id}`
-        fetch(url, {
-            method: 'delete'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    alert('deleted successfully!');
-                    fetch(`http://localhost:5000/orders?email=${user.email}`)
-                        .then(res => res.json())
-                        .then(data => { setOrders(data) });
-                    // const remaingOrders = 
-                } else {
-                    alert('delete operation not successfull. Delete once again!')
-                }
-            });
+        const proceed = window.confirm('do you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/rides/${id}`
+            fetch(url, {
+                method: 'delete'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully!');
+                        fetch(`http://localhost:5000/orders?email=${user.email}`)
+                            .then(res => res.json())
+                            .then(data => { setOrders(data) });
+                        // const remaingOrders = 
+                    } else {
+                        alert('delete operation not successfull. Delete once again!')
+                    }
+                });
+        }
 
     }
 
     return (
         <div>
             <h1 className="center">My rides</h1>
-            <ul>
+            <table>
+                <tr><th>Ride Name</th><th>Cost</th><th>Name</th><th>Email</th><th>Address</th><th>Payment Method</th><th>Status</th><th>Delete</th></tr>
                 {
-                    orders.map(order => <li key={order._id} >{order.rideName}--{order.cost}--{order.name}--{order.email}--{order.address}--{order.paymentMethod}--{order.status}--<button onClick={() => deleteOrder(order._id)} >X</button>
-                    </li>)
+                    orders.map(order => <tr key={order._id}><td>{order.rideName}</td><td>{order.cost}</td><td>{order.name}</td><td>{order.email}</td><td>{order.address}</td><td>{order.paymentMethod}</td><td>{order.status}</td><td><button className="bg-indigo-900 text-white  font-bold  px-3 py-1 rounded  mr-1 mb-1" onClick={() => deleteOrder(order._id)} >X</button></td>
+                    </tr>)
                 }
-            </ul>
+            </table>
 
         </div>
     );

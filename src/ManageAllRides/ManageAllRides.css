@@ -1,0 +1,10 @@
+table, th, td {
+    border: 2px solid rgb(31, 31, 110);
+    padding: 2px 3px;
+    
+  }
+
+  table{
+      margin: auto;
+      /* clear: both; */
+  }

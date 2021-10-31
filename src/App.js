@@ -13,6 +13,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import MyRides from './MyRides/MyRides';
 import ManageAllRides from './ManageAllRides/ManageAllRides';
 import AddNewRide from './AddNewRide/AddNewRide';
+import UpdateOrder from './UpdateOrder/UpdateOrder';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path='/addNewRide'>
               <AddNewRide></AddNewRide>
+            </Route>
+            <Route path='/update/:id'>
+              <UpdateOrder></UpdateOrder>
             </Route>
             <Route path='/*'>
               <NotFound></NotFound>

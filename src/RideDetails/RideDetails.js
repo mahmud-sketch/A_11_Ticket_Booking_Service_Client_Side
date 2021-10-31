@@ -52,25 +52,31 @@ function RideDetails() {
 
     return (
         <div>
-            <h2>Place Your Order for a Ride</h2>
-            <div className="card">
-                <h2>name:{ride?.name}</h2>
-                <h3>cost:{ride?.cost}</h3>
-                <p>info:{ride?.info}</p>
-                <img src={ride?.img} alt="ride" />
+            <h2 className="center">Place Your Order for a Ride</h2>
+            <div className="flex">
+                <div className="card">
+                    <h2>name:{ride?.name}</h2>
+                    <h3>cost:{ride?.cost}</h3>
+                    <p>info:{ride?.info}</p>
+                    <img src={ride?.img} alt="ride" />
+                </div>
+                <div>
+                    <h2>{user.displayName}</h2>
+                    <h2>{user.email}</h2>
+                    <form onSubmit={handleAddOrder}>
+                        <input type="address" placeholder="write address" name="" id="" ref={addressRef} /><br />
+                        <input type="radio" id="cash" name="paymentMethod" value="cash" ref={paymentMethodRef} />
+                        <label htmlFor="cash">cash</label>
+                        <input type="radio" id="bksah" name="paymentMethod" value="Bkash" ref={paymentMethodRef} />
+                        <label htmlFor="bkash">bkash</label>
+                        <input type="radio" id="bank" name="paymentMethod" value="bank" ref={paymentMethodRef} />
+                        <label htmlFor="bank">bank</label><br />
+                        <input type="submit" value="add order" />
+                    </form>
+
+                </div>
             </div>
-            <h2>{user.displayName}</h2>
-            <h2>{user.email}</h2>
-            <form onSubmit={handleAddOrder}>
-                <input type="address" placeholder="write address" name="" id="" ref={addressRef} /><br />
-                <input type="radio" id="cash" name="paymentMethod" value="cash" ref={paymentMethodRef} />
-                <label htmlFor="cash">cash</label>
-                <input type="radio" id="bksah" name="paymentMethod" value="Bkash" ref={paymentMethodRef} />
-                <label htmlFor="bkash">bkash</label>
-                <input type="radio" id="bank" name="paymentMethod" value="bank" ref={paymentMethodRef} />
-                <label htmlFor="bank">bank</label><br />
-                <input type="submit" value="add order" />
-            </form>
+
         </div>
     );
 }

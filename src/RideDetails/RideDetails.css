@@ -5,6 +5,15 @@ h3, h4, h5{
 
 }
 
+.center{
+    font-weight: 1000;
+    font-size:xx-large;
+    text-align: center;
+    padding: 30px;
+    border:1px solid #f1dede;
+    background-color:lightblue;
+}
+
 .middle{
     margin-left: 110px;
     margin-top: 15px;
@@ -14,7 +23,7 @@ h3, h4, h5{
     width:400px;
     border: 2px solid rgb(15, 11, 29);
     border-radius: 5px;
-    background-color: rgb(247, 239, 252);
+    background-color:rgb(245, 236, 250);
     padding: 10px;
     margin: 20px;
     text-align: justify;
@@ -22,4 +31,16 @@ h3, h4, h5{
 
 .card:hover{
     background-color: rgb(234, 208, 250);
+}
+
+.flex{
+    display: flex;
+}
+
+@media only screen and (max-width:480px){
+    .flex{
+        
+        flex-direction: column;
+    }
+
 }

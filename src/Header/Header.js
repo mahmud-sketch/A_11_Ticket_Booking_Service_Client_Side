@@ -93,7 +93,19 @@ function Header() {
                         }
                         {/* <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">{user.displayName} </span> */}
                         {
-                            user.email ? <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">welcome {user.displayName} </span> : <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">username</span>
+                            user.email ? <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">welcome {user.displayName} </span> : <span className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">username</span>
+
+                        }
+                        {
+                            user.email ? <Link to='/myRides' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">My Rides</Link> : <span ></span>
+
+                        }
+                        {
+                            user.email ? <Link to='/manageAllRides' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Manage All rides</Link> : <span ></span>
+
+                        }
+                        {
+                            user.email ? <Link to='/addNewRide' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Add a New Ride</Link> : <span ></span>
 
                         }
 
